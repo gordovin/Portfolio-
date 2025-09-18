@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - My Portfolio</title>
+  <style>
+    body { background:#f0f8ff; font-family:Arial,sans-serif; margin:0; }
+    header { background:#87ceeb; padding:15px 30px; display:flex; justify-content:space-between; align-items:center; border-bottom:3px solid #4682b4; }
+    header h1 { color:white; font-size:22px; }
+    nav a { margin-left:20px; color:white; font-weight:bold; text-decoration:none; }
+    nav a:hover { color:#333; }
+    .hero { text-align:center; padding:40px 20px; }
+    .hero img { width:120px; height:120px; border-radius:50%; border:4px solid #4682b4; margin-bottom:15px; }
+    .hero h2 { font-size:26px; color:#4682b4; }
+    .hero p { font-size:16px; color:#333; }
+    section { padding:40px 20px; max-width:900px; margin:auto; }
+    h2 { text-align:center; margin-bottom:20px; color:#4682b4; }
+    .skill { margin:20px 0; }
+    .skill p { margin-bottom:8px; font-weight:bold; color:#4682b4; }
+    .bar { width:100%; background:#e0f7fa; border-radius:25px; overflow:hidden; height:25px; box-shadow:inset 0 2px 5px rgba(0,0,0,0.1); }
+    .fill { height:100%; background:linear-gradient(90deg,#87ceeb,#4682b4); color:white; text-align:right; padding-right:10px; font-size:14px; font-weight:bold; line-height:25px; }
+    footer { background:#87ceeb; text-align:center; padding:15px; margin-top:30px; color:white; font-size:14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Skills</h1>
+    <nav>
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('about') }}">About</a>
+      <a href="{{ url_for('profile') }}">Profile</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Profile Picture">
+    <h2>Aurellia Dannisi</h2>
+    <p>Web Developer | Designer | Programmer</p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+
+    <div class="skill">
+      <p>HTML</p>
+      <div class="bar"><div class="fill" style="width:90%;">90%</div></div>
+    </div>
+
+    <div class="skill">
+      <p>CSS</p>
+      <div class="bar"><div class="fill" style="width:85%;">85%</div></div>
+    </div>
+
+    <div class="skill">
+      <p>JavaScript</p>
+      <div class="bar"><div class="fill" style="width:70%;">70%</div></div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 My Portfolio | Made with ❤
+  </footer>
+</body>
+</html>
